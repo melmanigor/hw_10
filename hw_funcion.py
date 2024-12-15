@@ -1,4 +1,4 @@
-#Question 1
+# Question 1
 
 """ def Quadratic_solver(a, b, c):
     if a==0:
@@ -20,7 +20,7 @@ x1,x2=Quadratic_solver(a,b,c)
 print("The first solution: ",x1)
 print("The second solution: ",x2)
  """
-#Question 2
+# Question 2
 
 """ def biggest_divider():
     num1=int(input("Enter first number: "))
@@ -65,7 +65,7 @@ while user_chose!="d":
     if user_chose=="d":
         exit """
 
-#Question 8
+# Question 8
 
 """ def print_string(my_str,num):
     print(my_str*num)
@@ -74,7 +74,7 @@ my_str=input("Enter the string you want to print: ")
 quantaty_to_print=int(input("Enter how much times you want to print your string"))
 print_string(my_str,quantaty_to_print) """
 
-#Question 10
+# Question 10
 
 """ import datetime
 def print_time_now():
@@ -83,8 +83,9 @@ def print_time_now():
     print_time_now() """
 
 
+# Question 11
 
-import random
+""" import random
 def my_super_list(new_list):
     print("is function list: ",new_list)
     print(len(new_list))
@@ -102,4 +103,44 @@ last_random=int(input("enter the last of random number on the list: "))
 for i in range(list_size):
         new_list.append(random.randint(first_random,last_random))
 print(new_list)
-my_super_list(new_list)
+my_super_list(new_list) """
+
+
+# Question 19
+
+
+
+
+import colorama
+import random
+def special_square(hight, length):
+    for i in range(0, hight):
+        for j in range(0, length):
+            if (1 <= i < hight-1 and j == 0):
+                print("*", end='')
+            elif 1 <= i < hight-1 and j == length-1:
+                print("*", end='')
+            elif 1 <= i < hight-1 and 1 <= j < length-1:
+                print(" ", end='')
+            elif i == 0:
+                print("*", end='')
+            elif i == hight-1:
+                print("*", end='')
+        print("")
+
+
+random_size = random.sample(range(1, 10), 2)
+length = random_size[1]
+hight = random_size[0]
+print("\nhard coded square size\n")
+special_square(4, 6)
+print("\nrandom square size of hight: ",
+      random_size[0], "and length: ", random_size[1], "\n")
+special_square(hight, length)
+print("\n")
+hight_user = int(input("enter the hight of square: "))
+print("\n")
+length_user = int(input("enter the length of square: "))
+print("\nUser choose the  size of square hight = ",
+      hight_user, "and length = ", length_user, "\n")
+special_square(hight_user, length_user)
